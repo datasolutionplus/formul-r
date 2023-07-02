@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Services d'Analyse de Données</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="dropbtn">Services</a>
+          <div class="dropdown-content">
+            <a href="serv1.html">Analyse et visualisation de données statistiques</a>
+            <a href="serv2.html">Rédaction d'articles scientifiques</a>
+            <a href="serv3.html">Conception de formulaires d'enquêtes avec Kobotoolbox</a>
+          </div>
+        </li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contactez-nous</h2>
+      <p>Pour toute demande d'informations ou pour discuter de votre projet, n'hésitez pas à nous contacter en utilisant les coordonnées ci-dessous ou en remplissant le formulaire de contact. Nous nous ferons un plaisir de vous répondre dans les plus brefs délais.</p>
+      <div class="contact-details">
+        <p><strong>Email :</strong> <a href="mailto:assasjr@gmail.com">datasolutionplus6@gmail.com</a></p>
+        <p><strong>Téléphone / WhatsApp :</strong> <a href="https://wa.me/22969830198">+229 69830198</a></p>
+      </div>
+
+      <div id="contact-forms">
+        <div id="email-form" class="contact-form">
+          <h3>Envoyer un message par Email</h3>
+          <form action="mailto:datasolutionplus6@gmail.com" method="post">
+            <label for="email-name">Nom :</label>
+            <input type="text" id="email-name" name="name" required>
+
+            <label for="email-email">Email :</label>
+            <input type="email" id="email-email" name="email" required>
+
+            <label for="email-message">Message :</label>
+            <textarea id="email-message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Envoyer">
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tous droits réservés &copy; 2023 - Services d'Analyse de Données</p>
+  </footer>
+</body>
+</html>

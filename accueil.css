@@ -1,0 +1,218 @@
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles de l'en-tête */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute; font-size: 13px;
+  background-color: #f9f9f9; color: black;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a::before {
+  content: "\2192"; /* Code Unicode pour la flèche stylisée */
+  display: inline-block;
+  margin-right: 5px; /* Espacement entre la puce et le texte */
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Styles de la section principale (hero) */
+
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  animation: slideShow 20s infinite;
+  background-image: url("image.jpg"), url("img5.jpg"), url("img2.jpg"), url("img9.jpg"), url("img15.png"), url("img17.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  16.66% {
+    opacity: 1;
+    background-image: url("image.jpg");
+  }
+  33.33% {
+    opacity: 0;
+    background-image: url("img5.jpg");
+  }
+  50% {
+    opacity: 1;
+    background-image: url("img2.jpg");
+  }
+  66.66% {
+    opacity: 0;
+    background-image: url("img9.jpg");
+  }
+  83.33% {
+    opacity: 1;
+    background-image: url("img15.png");
+  }
+  100% {
+    opacity: 0;
+    background-image: url("img17.png");
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Styles de la section des services */
+.services {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.services ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services li {
+  flex: 0 0 calc(33.33% - 4rem);
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #f2f2f2;
+}
+
+.services h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services p {
+  font-size: 1.6rem;
+}
+
+/* Styles du pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+/* Styles pour la responsivité */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .about {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .about h3 {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}
