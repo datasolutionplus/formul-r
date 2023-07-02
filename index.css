@@ -91,7 +91,7 @@ nav ul li a {
   z-index: -1;
   animation: slideShow 20s infinite;
   background-image: url("image.jpg"), url("img5.jpg"), url("img2.jpg"), url("img9.jpg"), url("img15.png"), url("img17.png");
-  background-size: cover;
+  background-size: cover;  margin-bottom: 10px; padding 10px;
   background-position: center;
 }
 
